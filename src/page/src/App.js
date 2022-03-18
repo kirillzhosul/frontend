@@ -7,6 +7,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 // Pages.
+import AboutPage from "./pages/AboutPage";
+import ContactsPage from "./pages/ContactsPage";
+import ProjectsPage from "./pages/ProjectsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import HomePage from "./pages/HomePage";
 
@@ -19,6 +22,10 @@ const App = function() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
+          <Route path="/contacts" element={<ContactsPage/>}/>
+          <Route path="/projects" element={<ProjectsPage/>}/>
+          <Route path="/about" element={<AboutPage/>}/>
+          
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
         <Footer/>
