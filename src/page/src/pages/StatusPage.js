@@ -6,7 +6,7 @@ const StatusBadge = function ({url, label}){
 
     useEffect(() => {
         fetch(url, {
-            mode: "no-cors"
+            mode: "cors"
         }).then(() => {
             setIsLoading(false);
             setIsSuccess(true);
@@ -32,13 +32,10 @@ const StatusPage = function(){
         <div className="row justify-content-center">
             <div className="col-md-auto">
                 <div className="display-1 mt-5 mb-3">
-                   Statuses
+                   API Statuses
                 </div>
                 <ul class="list-group list-group-flush">
-                    <StatusBadge label="This page" url="https://kirillzhosul.site"/>
-                    <StatusBadge label="Notes" url="https://notes.kirillzhosul.site"/>
                     <StatusBadge label="Notes API" url="https://notes.kirillzhosul.site/api"/>
-                    <StatusBadge label="Shop" url="https://shop.kirillzhosul.site"/>
                 </ul>
             </div>
         </div>
