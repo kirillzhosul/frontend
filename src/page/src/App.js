@@ -11,6 +11,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactsPage from "./pages/ContactsPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import StatusPage from "./pages/StatusPage";
 import HomePage from "./pages/HomePage";
 
 
@@ -25,6 +26,7 @@ const App = function() {
           <Route path="/contacts" element={<ContactsPage/>}/>
           <Route path="/projects" element={<ProjectsPage/>}/>
           <Route path="/about" element={<AboutPage/>}/>
+          <Route path="/status" element={<StatusPage/>}/>
           
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>

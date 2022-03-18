@@ -20,9 +20,11 @@ const NavbarButtons = function(){
       <BootstrapNavbar.Collapse id="navbarScroll">
         <Nav navbarScroll>
             <Link to="/" className="nav-link">Home</Link>
-            <Link to="/projects" className="nav-link">Projects</Link>
             <Link to="/about" className="nav-link">About</Link>
+            <Link to="/projects" className="nav-link">Projects</Link>
             <Link to="/contacts" className="nav-link">Contacts</Link>
+            <Link to="/status" className="nav-link">Statuses</Link>
+            
         </Nav>
       </BootstrapNavbar.Collapse>
   )
