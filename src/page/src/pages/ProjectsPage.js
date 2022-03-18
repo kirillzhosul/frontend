@@ -8,7 +8,7 @@ const ProjectsPage = function(){
             <div className="row justify-content-center">
                 <div className="col-md-auto">
                     <p className="mt-5 display-1">
-                        Contacts
+                        Projects
                     </p>
 
                     <div className="row">
