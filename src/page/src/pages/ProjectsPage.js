@@ -12,7 +12,7 @@ const ProjectsPage = function(){
                     </p>
 
                     <div className="row">
-                        <div className="col">
+                        <div className="col-md-auto">
                             <a href="https://notes.kirillzhosul.site/" className="btn btn-primary btn-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-stickies" viewBox="0 0 16 16">
                                     <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5V13a1 1 0 0 0 1 1V1.5a.5.5 0 0 1 .5-.5H14a1 1 0 0 0-1-1H1.5z"/>
@@ -22,7 +22,7 @@ const ProjectsPage = function(){
                             </a>
                         </div>
                         
-                        <div className="col">
+                        <div className="col-md-auto">
                             <a href="/" className="btn btn-primary btn-lg disabled">
                                 This page
                             </a>
