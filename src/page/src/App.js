@@ -13,7 +13,8 @@ import ProjectsPage from "./pages/ProjectsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import StatusPage from "./pages/StatusPage";
 import HomePage from "./pages/HomePage";
-
+import PrivacyPolicy from "./pages/LegalPrivacyPolicy";
+import TermsOfUse from "./pages/LegalTermsOfUse";
 
 const App = function() {
   /// @description Main app container.
@@ -27,6 +28,8 @@ const App = function() {
           <Route path="/projects" element={<ProjectsPage/>}/>
           <Route path="/about" element={<AboutPage/>}/>
           <Route path="/status" element={<StatusPage/>}/>
+          <Route path="/legal/privacy-policy" element={<PrivacyPolicy/>}/>
+          <Route path="/legal/terms-of-use" element={<TermsOfUse/>}/>
           
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
