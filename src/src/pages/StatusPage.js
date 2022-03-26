@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 const StatusBadge = function ({url, label}){
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const [isSuccess, setIsSuccess] = useState(false);
 
     useEffect(() => {
