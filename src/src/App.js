@@ -12,8 +12,7 @@ import ContactsPage from "./pages/ContactsPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import HomePage from "./pages/HomePage";
-import PrivacyPolicy from "./pages/legal/LegalPrivacyPolicy";
-import TermsOfUse from "./pages/legal/LegalTermsOfUse";
+
 
 const App = function() {
   /// @description Main app container.
