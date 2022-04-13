@@ -12,12 +12,6 @@ const FooterButtons = function(){
             <a className="text-muted col" href="https://florgon.space">
                 florgon.space
             </a>
-            <Link to="/legal/privacy-policy" className="text-muted col">
-                Privacy Policy
-            </Link>
-            <Link to="/legal/terms-of-use" className="text-muted col">
-                Terms Of Use
-            </Link>
         </div>
     )
 }

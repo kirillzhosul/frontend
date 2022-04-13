@@ -26,8 +26,6 @@ const App = function() {
           <Route path="/contacts" element={<ContactsPage/>}/>
           <Route path="/projects" element={<ProjectsPage/>}/>
           <Route path="/about" element={<AboutPage/>}/>
-          <Route path="/legal/privacy-policy" element={<PrivacyPolicy/>}/>
-          <Route path="/legal/terms-of-use" element={<TermsOfUse/>}/>
           
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
