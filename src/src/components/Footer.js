@@ -9,6 +9,9 @@ const FooterButtons = function(){
             <span className="text-muted col">
                 © 2022 Kirill Zhosul (@kirillzhosul)
             </span>
+            <a className="text-muted col" href="https://florgon.space">
+                florgon.space
+            </a>
             <Link to="/legal/privacy-policy" className="text-muted col">
                 Privacy Policy
             </Link>

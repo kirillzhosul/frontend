@@ -13,12 +13,9 @@ const HomePage = function(){
                     <span className="display-6 text-muted">
                         Programmer - Developer
                     </span>
-                    <p className="text-danger mt-5 display-6">
-                        This page is under development yet!
-                    </p>
-                    <p className="display-6 mt-5">
-                        Pages
-                    </p>
+                    <div className="display-6 mb-5">
+                        An owner of <a href="https://florgon.space">florgon.space</a>.
+                    </div>
                     <div className="row">
                         <div className="col"><Link to="/about" className="btn btn-lg btn-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
