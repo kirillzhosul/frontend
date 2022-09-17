@@ -8,7 +8,7 @@ const HomePage = function () {
           <div className="bc-logo bc-logo-userpic">
             <img
               className="bc-logo-image"
-              src="//media.jino.ru/userpics/52/d9d9/7a6d104bee885d4bd1d338fff2/regular@2x.png"
+              src="https://avatars.githubusercontent.com/u/79853674?v=4"
               alt="Profile"
             />
           </div>
