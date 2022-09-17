@@ -1,20 +1,23 @@
-// Libraries.
 import React from "react";
 
-
-const NotFoundPage = function(){
-    /// @description 404 Not found page.
-    return (
-        <div>
-            <div className="text-danger display-1 mt-5">
-                Page not found!
-            </div>
-            <div className="display-6 mt-5">
-                Sorry, page you are looking for, not found!
-            </div>
+const NotFoundPage = function () {
+  return (
+    <>
+      <div className="bc bc-list">
+        <div className="bc-head bc-head-withlogo">
+          <div className="bc-texts">
+            <h1 className="bc-title">Page not found!</h1>
+            <p className="bc-text">
+              Oops! Page that you were looking for is not found or not exists
+              yet!
+            </p>
+            <br />
+            <a href="/">Go home</a>
+          </div>
         </div>
-    )
-}
-
+      </div>
+    </>
+  );
+};
 
 export default NotFoundPage;
