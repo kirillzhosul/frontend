@@ -40,7 +40,7 @@ const HomePage = function () {
               <br /> for Games I prefer to use <b>Game Maker</b> but also have
               experience in <b>Unity</b>.
               <br />
-              Also I tried to worked with <b>C#</b>, <b>C++</b>, <b>Java</b>
+              Also I tried to work with <b>C#</b>, <b>C++</b>, <b>Java</b>
             </p>
             <br />
             <p className="bc-text">
