@@ -19,7 +19,7 @@ const HomePage = function () {
               <br />
               <i>Backend | Gamedev | Frontend</i>
             </p>
-            <small>(Currently opened to job offers!)</small>
+            <small>(Currently opened to job offers! <a href="/cv">My CV</a>)</small>
             <div>
               <hr />
             </div>
