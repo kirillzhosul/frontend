@@ -61,6 +61,36 @@ const HomePage = function () {
                 kirillzhosul/shop
               </a>
               , Merchandise shop for the competition.
+              <br />
+              <a href="https://github.com/kirillzhosul/hhru">
+                kirillzhosul/hhru
+              </a>
+              , hh.ru simple wrapper-library. Works with HeadHunter API.
+              <br />
+              <a href="https://github.com/kirillzhosul/cookie-widget">
+                kirillzhosul/cookie-widget
+              </a>
+              , Widget about using cookies hosted on GitHub pages.
+              <br />
+              <a href="https://github.com/kirillzhosul/next-yandex-metrika">
+                kirillzhosul/next-yandex-metrika
+              </a>
+              , Small component that allows to use Yandex.Metrika in Next.js
+              <br />
+              <a href="https://github.com/kirillzhosul/dotfiles">
+                kirillzhosul/dotfiles
+              </a>
+              , Collection of scripts / configs files that I actively use during work (Docker / Nginx / etc)
+              <br />
+              <a href="https://github.com/kirillzhosul/matrix-webcam">
+                kirillzhosul/matrix-webcam
+              </a>
+              , Page that makes your webcam behave like matrix. (Hosted on GitHub pages).
+              <br />
+              <a href="https://github.com/kirillzhosul/django-stripe">
+                kirillzhosul/django-stripe
+              </a>
+              , Test task for one of the companies. Django simple *shop* with Stripe.
             </p>
 
             <br />
