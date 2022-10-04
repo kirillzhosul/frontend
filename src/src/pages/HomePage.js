@@ -108,7 +108,11 @@ const HomePage = function () {
               , Storage for GitHub pages projects.
               <br />
               <a href="https://florgon.space">florgon.space</a>, My website with
-              different services.
+              different services and SSO (OAuth).
+              <br />
+              <a href="https://cc.florgon.space">cc.florgon.space</a>, Link shortener.
+              <br />
+              <a href="https://gatey.florgon.space">gatey.florgon.space</a>, Error logging / monitoring service.
             </p>
           </div>
         </div>
