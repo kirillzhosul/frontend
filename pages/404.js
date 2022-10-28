@@ -11,9 +11,9 @@ export default function NotFound() {
       <div className="bc bc-list">
         <div className="bc-head bc-head-withlogo">
           <div className="bc-texts">
-            <h1 className="bc-title">Page not found!</h1>
+            <h1 className="bc-title">[404] Page not found!</h1>
             <p className="bc-text">
-              Oops! Page that you were looking for is not found or not exists
+              Oops! Page that you were looking for was deleted or not exists
               yet!
             </p>
             <br />

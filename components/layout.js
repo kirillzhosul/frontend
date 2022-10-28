@@ -37,7 +37,7 @@ export default function Layout({ children }) {
         <meta name="title" content="Kirill Zhosul" />
         <title>Kirill Zhosul</title>
       </Head>
-      {children}
+      <div className="bc bc-list">{children}</div>
     </>
   );
 }
