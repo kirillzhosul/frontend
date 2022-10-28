@@ -1,14 +1,9 @@
 const nextTranslate = require("next-translate");
 
-/**
- * @type {import('next').NextConfig}
- */
-const nextConfig = {
+module.exports = nextTranslate({
   reactStrictMode: true,
   output: "standalone",
   images: {
     domains: ["kirillzhosul.site"],
   },
-};
-
-module.exports = nextTranslate(nextConfig);
+});
