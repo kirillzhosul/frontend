@@ -1,6 +1,4 @@
-import React from "react";
-
-const HomePage = function () {
+export default function Home() {
   return (
     <>
       <div className="bc bc-list bc-withjinologo">
@@ -19,7 +17,9 @@ const HomePage = function () {
               <br />
               <i>Backend | Gamedev | Frontend</i>
             </p>
-            <small>(Currently opened to job offers! <a href="/cv">My CV</a>)</small>
+            <small>
+              (Currently opened to job offers! <a href="/cv">My CV</a>)
+            </small>
             <div>
               <hr />
             </div>
@@ -80,17 +80,20 @@ const HomePage = function () {
               <a href="https://github.com/kirillzhosul/dotfiles">
                 kirillzhosul/dotfiles
               </a>
-              , Collection of scripts / configs files that I actively use during work (Docker / Nginx / etc)
+              , Collection of scripts / configs files that I actively use during
+              work (Docker / Nginx / etc)
               <br />
               <a href="https://github.com/kirillzhosul/matrix-webcam">
                 kirillzhosul/matrix-webcam
               </a>
-              , Page that makes your webcam behave like matrix. (Hosted on GitHub pages).
+              , Page that makes your webcam behave like matrix. (Hosted on
+              GitHub pages).
               <br />
               <a href="https://github.com/kirillzhosul/django-stripe">
                 kirillzhosul/django-stripe
               </a>
-              , Test task for one of the companies. Django simple *shop* with Stripe.
+              , Test task for one of the companies. Django simple *shop* with
+              Stripe.
             </p>
 
             <br />
@@ -110,9 +113,11 @@ const HomePage = function () {
               <a href="https://florgon.space">florgon.space</a>, My website with
               different services and SSO (OAuth).
               <br />
-              <a href="https://cc.florgon.space">cc.florgon.space</a>, Link shortener.
+              <a href="https://cc.florgon.space">cc.florgon.space</a>, Link
+              shortener.
               <br />
-              <a href="https://gatey.florgon.space">gatey.florgon.space</a>, Error logging / monitoring service.
+              <a href="https://gatey.florgon.space">gatey.florgon.space</a>,
+              Error logging / monitoring service.
             </p>
           </div>
         </div>
@@ -158,12 +163,10 @@ const HomePage = function () {
           </li>
           <li className="bc-link bc-link-address bc-link-defaultcolor">
             <span className="bc-link-icon"></span>
-            Russia, Syzran
+            Russia, Samara
           </li>
         </ul>
       </div>
     </>
   );
-};
-
-export default HomePage;
+}

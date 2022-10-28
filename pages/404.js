@@ -1,8 +1,13 @@
-import React from "react";
+import Head from "next/head";
+import Link from "next/link";
 
-const NotFoundPage = function () {
+export default function NotFound() {
   return (
     <>
+      <Head>
+        <meta name="title" content="Page not found!" />
+        <title>Page not found!</title>
+      </Head>
       <div className="bc bc-list">
         <div className="bc-head bc-head-withlogo">
           <div className="bc-texts">
@@ -12,12 +17,10 @@ const NotFoundPage = function () {
               yet!
             </p>
             <br />
-            <a href="/">Go home</a>
+            <Link href="/">Go home</Link>
           </div>
         </div>
       </div>
     </>
   );
-};
-
-export default NotFoundPage;
+}
