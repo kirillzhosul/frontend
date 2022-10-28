@@ -1,6 +1,10 @@
 import Links from "../components/links";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
+import setLanguage from "next-translate/setLanguage";
+
 export default function Projects() {
+  const { t, lang } = useTranslation("common");
   return (
     <>
       <div className="bc-head bc-head-withlogo">
@@ -12,12 +16,21 @@ export default function Projects() {
           />
         </div>
         <div className="bc-texts">
-          <h1 className="bc-title">Kirill Zhosul</h1>{" "}
+          <h1 className="bc-title">{t("kirillzhosul")}</h1>{" "}
           <small>
-            <b>Programmer - Developer</b>
+            <b>{t("programmer-developer")}</b>
           </small>
           <p className="bc-text">
-            <Link href="/">Home</Link> | <Link href="/projects">Projects</Link>
+            <Link href="/">{t("home")}</Link> |{" "}
+            <Link href="/projects">{t("projects")}</Link> |{" "}
+            <a
+              href="#"
+              onClick={async () =>
+                await setLanguage(lang === "ru" ? "en" : "ru")
+              }
+            >
+              {lang === "ru" ? "english" : "русский"}
+            </a>
           </p>
           <div>
             <hr />

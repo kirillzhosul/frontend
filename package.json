@@ -12,6 +12,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.5",
     "next": "12.2.4",
+    "next-translate": "^1.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
