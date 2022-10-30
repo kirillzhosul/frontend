@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
+import PoweredBy from "../components/poweredBy";
 
 export default function NotFound() {
-  const { t } = useTranslation("common");
+  const { t, lang } = useTranslation("common");
   return (
     <>
       <Head>
@@ -17,6 +18,8 @@ export default function NotFound() {
             <p className="bc-text">{t("page-not-found-description")}</p>
             <br />
             <Link href="/">{t("go-home")}</Link>
+            <br />
+            <PoweredBy lang={lang} />
           </div>
         </div>
       </div>

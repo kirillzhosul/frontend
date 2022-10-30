@@ -1,4 +1,4 @@
-export default function Links({ children }) {
+export default function Links() {
   return (
     <ul className="bc-links bc-links-4">
       <li className="bc-link bc-link-email bc-link-defaultcolor">

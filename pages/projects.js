@@ -1,4 +1,4 @@
-import Links from "../components/links";
+import Footer from "../components/footer";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
 import setLanguage from "next-translate/setLanguage";
@@ -106,7 +106,7 @@ export default function Projects() {
           </p>
         </div>
       </div>
-      <Links />
+      <Footer lang={lang} />
     </>
   );
 }
