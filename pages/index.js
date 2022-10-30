@@ -1,5 +1,6 @@
 import Footer from "../components/footer";
 import Link from "next/link";
+import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import setLanguage from "next-translate/setLanguage";
 
@@ -10,9 +11,13 @@ export default function Home() {
     <>
       <div className="bc-head bc-head-withlogo">
         <div className="bc-logo bc-logo-userpic">
-          <img
+          <Image
+            style={{ borderRadius: "80px" }}
             className="bc-logo-image"
-            src="https://avatars.githubusercontent.com/u/79853674?v=4"
+            src="https://avatars.githubusercontent.com/u/79853674"
+            width="80"
+            height="80"
+            alt="avatar"
           />
         </div>
         <div className="bc-texts">
@@ -46,6 +51,15 @@ export default function Home() {
             <i>Python</i>). <br />
             Started from <b>Game Development</b>, currently interested also in{" "}
             <b>Frontend Development</b>.
+          </p>
+          <br />
+          <p className="bc-text">
+            <Image
+              src="https://github-readme-stats.vercel.app/api?username=kirillzhosul&show_icons=true&count_private=true&theme=white&include_all_commits=true^"
+              alt="loading..."
+              width="494"
+              height="194"
+            ></Image>
           </p>
           <br />
           <p className="bc-text">

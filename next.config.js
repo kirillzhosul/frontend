@@ -4,6 +4,10 @@ module.exports = nextTranslate({
   reactStrictMode: true,
   output: "standalone",
   images: {
-    domains: ["kirillzhosul.site"],
+    domains: [
+      "kirillzhosul.site",
+      "github-readme-stats.vercel.app",
+      "avatars.githubusercontent.com",
+    ],
   },
 });
