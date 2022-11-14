@@ -1,5 +1,5 @@
-import Footer from "../components/footer";
-import Link from "next/link";
+import Navbar from "../../components/navbar";
+
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import setLanguage from "next-translate/setLanguage";
@@ -20,27 +20,7 @@ export default function Projects() {
           />
         </div>
         <div className="bc-texts">
-          <h1 className="bc-title">{t("kirillzhosul")}</h1>{" "}
-          <small>
-            <b>{t("programmer-developer")}</b>
-          </small>
-          <p className="bc-text">
-            <Link href="/">{t("home")}</Link> |{" "}
-            <Link href="/projects">{t("projects")}</Link> |{" "}
-            <Link href="/courses">{t("courses")}</Link> |{" "}
-            <a
-              href="#"
-              onClick={async () =>
-                await setLanguage(lang === "ru" ? "en" : "ru")
-              }
-            >
-              {lang === "ru" ? "english" : "русский"}
-            </a>
-          </p>
-          <div>
-            <hr />
-          </div>
-          <br />
+          <Navbar t={t} lang={lang} setLanguage={setLanguage} />
           <p className="bc-text">
             <b>
               <i>{t("no-projects-yet")}</i>
@@ -48,7 +28,6 @@ export default function Projects() {
           </p>
         </div>
       </div>
-      <Footer lang={lang} />
     </>
   );
 }

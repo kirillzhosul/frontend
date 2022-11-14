@@ -23,7 +23,11 @@ export default function Courses() {
           <Navbar t={t} lang={lang} setLanguage={setLanguage} />
           <p className="bc-text">
             <b>
-              <i>{t("courses-wip")}</i>
+              <i>{t("profile-wip")}</i>
+              <br />
+              <a href="https://florgon.space/oauth/authorize?client_id=9&redirect_uri=https://kirillzhosul.site/profile&response_type=code">
+                {t("signin-florgon-sso")}
+              </a>
             </b>
           </p>
         </div>

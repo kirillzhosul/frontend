@@ -15,5 +15,9 @@
     "courses-wip": "Courses are in development yet!",
     
     "about-me-title": "About me",
-    "about-me-text": "Currently site is under reconstruction, information there is temporarily removed!"
+    "about-me-text": "Currently site is under reconstruction, information there is temporarily removed!",
+
+    "profile": "Profile",
+    "profile-wip": "Profile is under development (WIP)!",
+    "signin-florgon-sso": "Sign-in with Florgon..."
 }
