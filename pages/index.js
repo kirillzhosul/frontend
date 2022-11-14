@@ -28,6 +28,7 @@ export default function Home() {
           <p className="bc-text">
             <Link href="/">{t("home")}</Link> |{" "}
             <Link href="/projects">{t("projects")}</Link> |{" "}
+            <Link href="/courses">{t("courses")}</Link> |{" "}
             <a
               href="#"
               onClick={async () =>
@@ -42,23 +43,10 @@ export default function Home() {
           </div>
           <p className="bc-text">
             <b>
-              <i>{t("about-me")}</i>
+              <i>{t("about-me-title")}</i>
             </b>
             <br />
-            Hello there! My name is <b>Kirill</b>. <br />I am doing programming
-            for about <b>6</b> years (Or <b>3</b> years of professional)! <br />
-            Currently I realize myself more as <b>Backend Developer</b> (
-            <i>Python</i>). <br />
-            Started from <b>Game Development</b>, currently interested also in{" "}
-            <b>Frontend Development</b>.
-          </p>
-          <br />
-          <p className="bc-text">
-            <b>
-              <i>My projects and websites</i>
-            </b>
-            <br />
-            <Link href="/projects">Go to projects page...</Link>
+            {t("about-me-text")}
           </p>
         </div>
       </div>

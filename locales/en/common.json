@@ -3,9 +3,17 @@
     "page-not-found": "Page not found!",
     "page-not-found-title": "[404] Page not found!",
     "page-not-found-description": "Oops! Page that you were looking for was deleted or not exists yet!",
+    
     "kirillzhosul": "Kirill Zhosul",
-    "about-me": "About me",
+    "programmer-developer": "Programmer - Developer",
+    
     "projects": "Projects",
     "home": "Home",
-    "programmer-developer": "Programmer - Developer"
+    "courses": "Courses",
+    
+    "no-projects-yet": "There is no projects yet, please wait new updates!",
+    "courses-wip": "Courses are in development yet!",
+    
+    "about-me-title": "About me",
+    "about-me-text": "Currently site is under reconstruction, information there is temporarily removed!"
 }

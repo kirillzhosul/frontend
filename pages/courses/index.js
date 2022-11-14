@@ -1,11 +1,12 @@
-import Footer from "../components/footer";
+import Footer from "../../components/footer";
 import Link from "next/link";
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import setLanguage from "next-translate/setLanguage";
 
-export default function Projects() {
+export default function Courses() {
   const { t, lang } = useTranslation("common");
+
   return (
     <>
       <div className="bc-head bc-head-withlogo">
@@ -43,12 +44,12 @@ export default function Projects() {
           <br />
           <p className="bc-text">
             <b>
-              <i>{t("no-projects-yet")}</i>
+              <i>{t("courses-wip")}</i>
             </b>
           </p>
         </div>
       </div>
-      <Footer lang={lang} />
+      <Footer />
     </>
   );
 }
