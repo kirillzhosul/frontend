@@ -1,11 +1,9 @@
 import Links from "./links";
-import PoweredBy from "./poweredBy";
 
-export default function Footer({ lang }) {
+export default function Footer() {
   return (
     <>
       <Links />
-      <PoweredBy lang={lang} />
     </>
   );
 }
