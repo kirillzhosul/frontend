@@ -3,8 +3,8 @@ export default function Links() {
     <ul className="bc-links bc-links-4">
       <li className="bc-link bc-link-email bc-link-defaultcolor">
         <span className="bc-link-icon"></span>
-        <a href="mailto:me@florgon.space" className="bc-link-anchor">
-          me@florgon.space
+        <a href="mailto:kirillzhosul@yandex.com" className="bc-link-anchor">
+          me@kirillzhosul.site
         </a>
       </li>
       <li className="bc-link bc-link-github bc-link-defaultcolor">
