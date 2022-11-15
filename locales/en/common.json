@@ -18,6 +18,6 @@
     "about-me-text": "Currently site is under reconstruction, information there is temporarily removed!",
 
     "profile": "Profile",
-    "profile-wip": "Profile is under development (WIP)!",
+    "signin-title": "Select auth method:",
     "signin-florgon-sso": "Sign-in with Florgon..."
 }
