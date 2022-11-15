@@ -3,10 +3,9 @@ import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import setLanguage from "next-translate/setLanguage";
 import useAuth from "../../contexts/auth";
-import { useState } from "react";
 import Link from "next/link";
 
-export default function Courses() {
+export default function Profile() {
   const { t, lang } = useTranslation("common");
   const {
     user,
@@ -92,7 +91,7 @@ export default function Courses() {
                           course.purchased_at * 1000
                         ).toLocaleDateString(lang)}
                       </b>{" "}
-                      for <b>{course.purchased_for}</b> roubles.
+                      for <b>{course.purchased_for}</b> rubles.
                     </>
                   );
                 })}
