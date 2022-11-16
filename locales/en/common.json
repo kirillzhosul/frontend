@@ -19,5 +19,9 @@
 
     "profile": "Profile",
     "signin-title": "Select auth method:",
-    "signin-florgon-sso": "Sign-in with Florgon..."
+    "signin-florgon-sso": "Sign-in with Florgon...",
+    "you-accepting": "You are accepting",
+    "legal-terms": "Terms",
+    "legal-privacy": "Privacy Policy",
+    "and": "and"
 }

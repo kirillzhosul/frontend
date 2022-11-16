@@ -47,6 +47,12 @@ export default function Profile() {
                   {t("signin-florgon-sso")}
                 </a>
               </b>
+              <br />
+              <i>
+                {t("you-accepting")}{" "}
+                <Link href="/legal/terms">{t("legal-terms")}</Link> {t("and")}{" "}
+                <Link href="/legal/privacy">{t("legal-privacy")}</Link>!
+              </i>
             </p>
           </div>
         </div>
