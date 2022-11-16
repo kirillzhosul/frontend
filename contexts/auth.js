@@ -37,11 +37,14 @@ const AuthProvider = ({ children }) => {
     loadAccessTokenFromCookies();
   }, []);
 
-  const requestOauthAuthorization = () => {
-    if (typeof window === "undefined") return;
+  const getOAuthAuthorizationUrl = () => {
     const clientId = process.env.NEXT_PUBLIC_FLORGON_OAUTH_CLIENT_ID;
     const redirectUri = `${process.env.NEXT_PUBLIC_FLORGON_OAUTH_REDIRECT_URI_DOMAIN}/sso/oauth/callback`;
-    window.location.href = `https://florgon.space/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=email`;
+    return `https://florgon.space/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=email`;
+  };
+  const requestOauthAuthorization = () => {
+    if (typeof window === "undefined") return;
+    window.location.href = getOAuthAuthorizationUrl();
   };
 
   const loginUserWithAccessToken = (accessToken) => {
@@ -61,6 +64,7 @@ const AuthProvider = ({ children }) => {
 
     accessToken,
 
+    getOAuthAuthorizationUrl,
     requestOauthAuthorization,
     loginUserWithAccessToken,
   };

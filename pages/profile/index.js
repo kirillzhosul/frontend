@@ -4,6 +4,7 @@ import useTranslation from "next-translate/useTranslation";
 import setLanguage from "next-translate/setLanguage";
 import useAuth from "../../contexts/auth";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Profile() {
   const { t, lang } = useTranslation("common");
@@ -11,10 +12,11 @@ export default function Profile() {
     user,
     isLoading,
     isAuthenticated,
-    requestOauthAuthorization,
+    getOAuthAuthorizationUrl,
     purchasedCourses,
     accessToken,
   } = useAuth();
+  const router = useRouter();
 
   if (!isAuthenticated && !isLoading) {
     return (
@@ -36,7 +38,12 @@ export default function Profile() {
               <b>
                 <i>{t("signin-title")}</i>
                 <br />-{" "}
-                <a onClick={requestOauthAuthorization} href="">
+                <a
+                  onClick={() => {
+                    router.push(getOAuthAuthorizationUrl());
+                  }}
+                  href="#"
+                >
                   {t("signin-florgon-sso")}
                 </a>
               </b>
