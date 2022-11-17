@@ -94,7 +94,6 @@ export default function Profile() {
             {purchasedCourses.length != 0 && (
               <>
                 {purchasedCourses.map((course) => {
-                  console.log(course);
                   return (
                     <>
                       - Course `

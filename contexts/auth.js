@@ -1,4 +1,10 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, {
+  createContext,
+  useState,
+  useContext,
+  useEffect,
+  useCallback,
+} from "react";
 import { useCookies } from "react-cookie";
 
 import { apiRequest } from "../shared/kirillzhosul-api";
@@ -13,29 +19,34 @@ const AuthProvider = ({ children }) => {
     process.env.NEXT_PUBLIC_ACCESS_TOKEN_COOKIE_NAME
   );
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(undefined);
 
   useEffect(() => {
-    function loadAccessTokenFromCookies() {
-      const accessToken =
-        cookies[process.env.NEXT_PUBLIC_ACCESS_TOKEN_COOKIE_NAME];
-      if (accessToken) {
-        apiRequest("users/me", "show_courses=true", accessToken)
-          .then((response) => {
-            setUser(response["success"]["user"]);
-            setPurchasedCourses(response["success"]["purchased_courses"]);
+    const accessToken =
+      cookies[process.env.NEXT_PUBLIC_ACCESS_TOKEN_COOKIE_NAME];
+
+    if (accessToken) {
+      setIsLoading(true);
+      apiRequest("users/me", "show_courses=true", accessToken)
+        .then((response) => {
+          response = response?.success;
+          if ("user" in response) {
+            setUser(response["user"]);
             setAccessToken(accessToken);
-            setIsLoading(false);
-          })
-          .catch(() => {
-            setIsLoading(false);
-          });
-        return;
-      }
+            if ("purchased_courses" in response) {
+              setPurchasedCourses(response["purchased_courses"]);
+            }
+          }
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          setError(error);
+          setIsLoading(false);
+        });
+    } else {
       setIsLoading(false);
     }
-    setIsLoading(true);
-    loadAccessTokenFromCookies();
-  }, []);
+  }, [cookies]);
 
   const getOAuthAuthorizationUrl = () => {
     const clientId = process.env.NEXT_PUBLIC_FLORGON_OAUTH_CLIENT_ID;
