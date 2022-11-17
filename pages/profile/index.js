@@ -97,14 +97,21 @@ export default function Profile() {
                   console.log(course);
                   return (
                     <>
-                      - Course with ID <b>{course.course_id}</b> (Purchase ID:{" "}
-                      <b>{course.purchase_id})</b>, purchased at{" "}
+                      - Course `
                       <b>
+                        <Link href={`/courses/${course?.course?.name}`}>
+                          {course?.course?.title}
+                        </Link>
+                      </b>
+                      ` <br />- -{" "}
+                      <i>
                         {new Date(
                           course.purchased_at * 1000
                         ).toLocaleDateString(lang)}
-                      </b>{" "}
-                      for <b>{course.purchased_for}</b> rubles.
+                      </i>{" "}
+                      for <b>{course.purchased_for}</b> rubles (Purchase ID:{" "}
+                      <b>{course.purchase_id})</b>.
+                      <br />
                     </>
                   );
                 })}

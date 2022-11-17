@@ -11,10 +11,14 @@ export default function Courses() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    apiRequest("courses/list").then((response) => {
-      setCourses(response?.success?.courses);
-      setIsLoading(false);
-    });
+    apiRequest("courses/list")
+      .then((response) => {
+        setCourses(response?.success?.courses);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        setIsLoading(false);
+      });
   }, []);
 
   return (
@@ -33,9 +37,12 @@ export default function Courses() {
         <div className="bc-texts">
           <Navbar t={t} lang={lang} setLanguage={setLanguage} />
           <p className="bc-text">
-            {isLoading && <>...</>}
+            {isLoading && <>Loading...</>}
             {!isLoading && (
               <>
+                {courses.length == 0 && (
+                  <>Server return 0 courses! May caused due to maintance!</>
+                )}
                 {courses.map((course) => {
                   return (
                     <>
