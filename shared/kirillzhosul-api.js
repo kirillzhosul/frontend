@@ -3,23 +3,13 @@
 
     Kirill Zhosul API library.
 
-    Used for working with Kirill Zhosul API.
-
-    Current SDK version:
-        unreleased-internal
-    Expected API version: 
-        v0.0.1
-
-    API documentation:
-        not yet released
-    
     Homepages:
         https://kirillzhosul.site/ 
 */
 
 // Settings.
 const API_EXPECTED_VERSION = "0.0.1";
-const API_ENDPOINT_URL = "https://api.kirillzhosul.site/v0/";
+const API_ENDPOINT_URL = "https://api-kirillzhosul.florgon.space/v1/";
 const API_HTTP_METHOD = "GET";
 const API_DEFAULT_HEADERS = {
   "Content-Type": "application/json",
