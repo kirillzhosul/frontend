@@ -19,7 +19,8 @@ export default function Courses({ query }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const queryParams = `page=${query?.page ?? 1}&language=${
+    const currentPage = (query?.page ?? 1) >= 1 ? query?.page ?? 1 : 1;
+    const queryParams = `page=${currentPage}&language=${
       query?.language ?? lang
     }&exclude_foreign_language=${query?.exclude_foreign_language ?? false}`;
     apiRequest("courses/list", queryParams)
@@ -30,9 +31,16 @@ export default function Courses({ query }) {
           o.current_total = response?.success?.current_total;
           return o;
         });
-        const max_page = response?.success?.pagination?.max_page ?? 1;
-        if ((query?.page ?? 1) > max_page) {
-          query.page = max_page;
+        const maxPage = response?.success?.pagination?.max_page ?? 1;
+        if (currentPage > maxPage) {
+          query.page = maxPage;
+          router.push({
+            pathname: "/courses",
+            query: query,
+          });
+        }
+        if ((query?.page ?? 1) <= 0) {
+          query.page = 1;
           router.push({
             pathname: "/courses",
             query: query,
@@ -89,39 +97,43 @@ export default function Courses({ query }) {
                     </div>
                   );
                 })}
-                <br />
-                {pagination?.page > 1 && (
-                  <a
-                    onClick={(e) => {
-                      query.page = pagination?.page - 1;
-                      router.push({
-                        pathname: "/courses",
-                        query: query,
-                      });
-                      e.preventDefault();
-                    }}
-                    href="#"
-                  >{`<-- Previous`}</a>
-                )}
-                <br />
-                {`Page ${pagination?.page} / ${pagination?.max_page} `}
-                <br />
-                Shown {pagination?.current_total} courses (Total for this query:{" "}
-                {pagination?.total}
-                )
-                <br />
-                {pagination?.max_page > pagination?.page && (
-                  <a
-                    onClick={(e) => {
-                      query.page = pagination?.page + 1;
-                      router.push({
-                        pathname: "/courses",
-                        query: query,
-                      });
-                      e.preventDefault();
-                    }}
-                    href="#"
-                  >{`Next -->`}</a>
+                {courses.length !== 0 && (
+                  <>
+                    <br />
+                    {pagination?.page > 1 && (
+                      <a
+                        onClick={(e) => {
+                          query.page = pagination?.page - 1;
+                          router.push({
+                            pathname: "/courses",
+                            query: query,
+                          });
+                          e.preventDefault();
+                        }}
+                        href="#"
+                      >{`<-- Previous`}</a>
+                    )}
+                    <br />
+                    {`Page ${pagination?.page} / ${pagination?.max_page} `}
+                    <br />
+                    Shown {pagination?.current_total} courses (Total for this
+                    query: {pagination?.total}
+                    )
+                    <br />
+                    {pagination?.max_page > pagination?.page && (
+                      <a
+                        onClick={(e) => {
+                          query.page = pagination?.page + 1;
+                          router.push({
+                            pathname: "/courses",
+                            query: query,
+                          });
+                          e.preventDefault();
+                        }}
+                        href="#"
+                      >{`Next -->`}</a>
+                    )}
+                  </>
                 )}
               </>
             )}
