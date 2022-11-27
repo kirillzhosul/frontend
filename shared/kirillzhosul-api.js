@@ -3,16 +3,6 @@
 
     Kirill Zhosul API library.
 
-    Used for working with Kirill Zhosul API.
-
-    Current SDK version:
-        unreleased-internal
-    Expected API version: 
-        v0.0.1
-
-    API documentation:
-        not yet released
-    
     Homepages:
         https://kirillzhosul.site/ 
 */
