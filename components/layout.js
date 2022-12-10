@@ -50,12 +50,15 @@ function LayoutHead() {
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content="Kirill Zhosul" />
-      <meta name="keywords" content="kirillzhosul, zhosul, kirill, developer" />
-      <link rel="canonical" href="https://kirillzhosul.site" />
+      <meta
+        name="keywords"
+        content="kirillzhosul, zhosul, kirill, developer, кирилл жосул, жосул"
+      />
+      <link rel="canonical" href={process.env.NEXT_PUBLIC_DEPLOYED_HREF} />
       <link
         rel="alternate"
         hrefLang="x-default"
-        href="https://kirillzhosul.site"
+        href={process.env.NEXT_PUBLIC_DEPLOYED_HREF}
       />
       <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -73,7 +76,7 @@ export default function Layout({ children }) {
     <>
       <LayoutHead />
       <CookieWidgetConfigured />
-      <div className="bc bc-list">{children}</div>
+      {children}
     </>
   );
 }

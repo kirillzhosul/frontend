@@ -4,9 +4,10 @@ export default function PrivacyPolicy() {
       <b>Пользовательское Соглашение</b>
       <br /> Настоящее Пользовательское Соглашение (Далее Соглашение) регулирует
       отношения между владельцем{" "}
-      <a href="https://kirillzhosul.site">
-        https://kirillzhosul.site
-      </a> (далее{" "}
+      <a href="{process.env.NEXT_PUBLIC_DEPLOYED_HREF}">
+        {process.env.NEXT_PUBLIC_DEPLOYED_HREF}
+      </a>{" "}
+      (далее{" "}
       <b>
         Жосул Кирилл Сергеевич{" "}
         {process.env.NEXT_PUBLIC_LEGAL_INN
@@ -14,11 +15,17 @@ export default function PrivacyPolicy() {
           : ""}
       </b>{" "}
       или Администрация) с одной стороны и пользователем сайта с другой. <br />
-      Сайт <a href="https://kirillzhosul.site">https://kirillzhosul.site</a> не
-      является средством массовой информации. <br />
+      Сайт{" "}
+      <a href="{process.env.NEXT_PUBLIC_DEPLOYED_HREF}">
+        {process.env.NEXT_PUBLIC_DEPLOYED_HREF}
+      </a>{" "}
+      не является средством массовой информации. <br />
       Используя сайт, Вы соглашаетесь с условиями данного соглашения. <br />
       Если Вы не согласны с условиями данного соглашения, не используйте сайт{" "}
-      <a href="https://kirillzhosul.site">https://kirillzhosul.site</a>!<br />
+      <a href="{process.env.NEXT_PUBLIC_DEPLOYED_HREF}">
+        https://kirillzhosul.site
+      </a>
+      !<br />
       <b>Права и обязанности сторон</b>
       <br />
       <b>Пользователь имеет право:</b>
