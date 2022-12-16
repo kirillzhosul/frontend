@@ -23,6 +23,7 @@ import {
   MenuDivider,
   MenuItem,
   MenuList,
+  useColorMode,
 } from "@chakra-ui/react";
 import {
   FiHome,
@@ -34,11 +35,12 @@ import {
   FiBell,
   FiChevronDown,
 } from "react-icons/fi";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
 
 const LinkItems = [
   { name: "Home", icon: FiHome, href: "/" },
-  { name: "Projects", icon: FiTrendingUp, href: "/projects" },
+  /*{ name: "Projects", icon: FiTrendingUp, href: "/projects" },*/
   { name: "Courses", icon: FiCompass, href: "/courses" },
 ];
 
@@ -140,6 +142,7 @@ const NavItem = ({ icon, href, children, ...rest }) => {
 };
 
 const MobileNav = ({ onOpen, ...rest }) => {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
@@ -166,16 +169,21 @@ const MobileNav = ({ onOpen, ...rest }) => {
         fontFamily="monospace"
         fontWeight="bold"
       >
-        Logo
+        Kirill Zhosul
       </Text>
 
       <HStack spacing={{ base: "0", md: "6" }}>
+        <Button onClick={toggleColorMode} variant="ghost">
+          {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+        </Button>
+
         <IconButton
           size="lg"
           variant="ghost"
           aria-label="open menu"
           icon={<FiBell />}
         />
+
         <Flex alignItems={"center"}>
           <Menu>
             <MenuButton
