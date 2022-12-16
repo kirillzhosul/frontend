@@ -1,16 +1,18 @@
 import Footer from "../components/footer";
-import Navbar from "../components/navbar";
+import SidebarWithHeader from "../components/sidebar";
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import setLanguage from "next-translate/setLanguage";
+
+import React, { ReactNode } from "react";
+import { Center, Container, HStack } from "@chakra-ui/react";
 
 export default function Home() {
   const { t, lang } = useTranslation("common");
 
   return (
-    <>
-      <div className="bc-head bc-head-withlogo">
-        <div className="bc-logo bc-logo-userpic">
+    <SidebarWithHeader>
+      {/*<div className="bc-logo bc-logo-userpic">
           <Image
             style={{ borderRadius: "80px" }}
             className="bc-logo-image"
@@ -19,19 +21,16 @@ export default function Home() {
             height="80"
             alt="avatar"
           />
-        </div>
-        <div className="bc-texts">
-          <Navbar t={t} lang={lang} setLanguage={setLanguage} />
-          <p className="bc-text">
+        </div>*/}
+      <Container maxW="full" centerContent overflow="hidden">
+        <Center h="88vh">
+          <HStack>
             <b>
-              <i>{t("about-me-title")}</i>
+              <i>{t("about-me-text")}</i>
             </b>
-            <br />
-            {t("about-me-text")}
-          </p>
-        </div>
-      </div>
-      <Footer />
-    </>
+          </HStack>
+        </Center>
+      </Container>
+    </SidebarWithHeader>
   );
 }
