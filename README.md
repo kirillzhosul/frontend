@@ -1,13 +1,12 @@
-# Kirill Zhosul Website.
+# 🚀 My personal web page
 
-### Description.
+🔧 Main website for my personal information. \
+👨‍💻 Deployed and used in production [here](https://kirillzhosul.florgon.com) or [here](https://florgon.com/kirillhosul).
 
-My personal website frontend. ([backend](https://github.com/kirillzhosul/api) (click)).
+### What is next?
 
-### See in action.
+✨ Currently, there is a slight overdrive, everything that was here before will soon return here! ✨
 
-Deployed [here](https://kirillzhosul.site).
+### Questions?
 
-### Technologies.
-
-Docker (Docker-Compose), React.js (Next.js), i18n.
+🗣️ Do not worry to contact me directly (contacts can be found at the page) 🗣️
