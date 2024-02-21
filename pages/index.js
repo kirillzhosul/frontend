@@ -59,7 +59,10 @@ export default function Home() {
       <h4>Проекты и вклады</h4>
       <ul>
         <li>
-          Владелец проекта <a href="https://florgon.com">Florgon</a>.
+          <s>
+            Владелец замороженного проекта{" "}
+            <a href="https://florgon.com">Florgon</a>.
+          </s>
         </li>
         <li>Множество open-source (и не только) проектов</li>
         <li>
@@ -70,9 +73,7 @@ export default function Home() {
             <a href="https://github.com/florgon/gatey-sdk-py">здесь</a>
           </i>
         </li>
-        <li>
-          <s>Разработчик в коммерческой компании</s>
-        </li>
+        <li>Коммерческий опыт разработки</li>
       </ul>
       <hr />
       <h4>Связаться со мной</h4>{" "}
@@ -90,10 +91,6 @@ export default function Home() {
         <li>
           <a href="github.com/kirillzhosul">github.com/kirillzhosul</a>,
           любителям систем контроля версий.
-        </li>
-        <li>
-          <a href="tel: 79956270933">79956270933</a>, любителям отвлекать от
-          работы звонками.
         </li>
         <li>
           <s>
