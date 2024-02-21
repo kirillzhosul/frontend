@@ -56,25 +56,6 @@ export default function Home() {
           <p>Несколько разработок в прошлом.</p>
         </li>
       </ul>
-      <h4>Проекты и вклады</h4>
-      <ul>
-        <li>
-          <s>
-            Владелец замороженного проекта{" "}
-            <a href="https://florgon.com">Florgon</a>.
-          </s>
-        </li>
-        <li>Множество open-source (и не только) проектов</li>
-        <li>
-          <i>
-            В последнее время - большая доля моих вкладов остаётся за закрытыми
-            дверями, но Вы всё ещё можете посмотреть пример моего кода{" "}
-            <a href="https://github.com/florgon/api">здесь </a> или{" "}
-            <a href="https://github.com/florgon/gatey-sdk-py">здесь</a>
-          </i>
-        </li>
-        <li>Коммерческий опыт разработки</li>
-      </ul>
       <hr />
       <h4>Связаться со мной</h4>{" "}
       <ul>
@@ -82,22 +63,20 @@ export default function Home() {
           <a href="mailto: kirillzhosul@florgon.com">
             kirillzhosul@florgon.com
           </a>
-          , любителям электронных почт.
         </li>
         <li>
-          <a href="t.me/kirillzhosul">t.me/kirillzhosul</a>, любителям
-          мессенджеров.
+          <a href="t.me/kirillzhosul">t.me/kirillzhosul</a>
         </li>
         <li>
-          <a href="github.com/kirillzhosul">github.com/kirillzhosul</a>,
-          любителям систем контроля версий.
+          <a href="github.com/kirillzhosul">github.com/kirillzhosul</a>
         </li>
-        <li>
-          <s>
-            Не нашли то что нужно? Вы всё так же можете найти меня в других
-            местах по тегу-нику @kirillzhosul
-          </s>
-        </li>
+      </ul>
+      <hr />
+      <h4>Стэк сайта</h4>{" "}
+      <ul>
+        <li>Next.js (Frontend)</li>
+        <li>FastAPI (Backend)</li>
+        <li>PosgreSQL, Docker, Github Actions</li>
       </ul>
     </>
   );
