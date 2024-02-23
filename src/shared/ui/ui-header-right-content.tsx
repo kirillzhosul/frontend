@@ -12,10 +12,8 @@ export function UiHeaderRightContent() {
           Showcase
         </UiButton>
       </UiLink>
-      <UiLink href={"/"}>
-        <UiButton variant="primary" disabled>
-          Blog
-        </UiButton>
+      <UiLink href={"/blog"}>
+        <UiButton variant="primary">Blog</UiButton>
       </UiLink>
       <UiLink href={"/contact"}>
         <UiButton variant="primary">Contact me</UiButton>

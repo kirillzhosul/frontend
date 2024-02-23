@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
+let nextConfig = {
   reactStrictMode: true,
-  basePath: "/web",
-  assetPrefix: "/web/",
 };
+
+if (process.env.NODE_ENV === "production") {
+  nextConfig.basePath = "/web";
+  nextConfig.assetPrefix = "/web";
+  nextConfig.output = "export";
+} else {
+}
 
 export default nextConfig;
