@@ -10,7 +10,7 @@ export function Header({ className, rightContent, logo }: HeaderProps) {
         "px-4 py-5 border-b border-b-slate-300 flex justify-between items-center bg-white"
       )}
     >
-      {logo && <Logo />}
+      {logo ? logo : <Logo />}
       {rightContent}
     </header>
   );
