@@ -1,0 +1,34 @@
+name: Continuous delivery production (CD)
+
+on:
+  push:
+    branches: prod
+
+jobs:
+  test-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.x.x
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run lint:types
+      - run: npm run test
+  production-cd:
+    needs: test-ci
+    runs-on: ubuntu-latest
+    concurrency:
+      group: production
+      cancel-in-progress: true
+    steps:
+      - name: SSH Command
+        uses: D3rHase/ssh-command-action@v0.2.2
+        with:
+          host: ${{ secrets.PRODUCTION_SSH_HOST }}
+          user: ${{ secrets.PRODUCTION_SSH_USERNAME }}
+          private_key: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+          host_fingerprint: ${{ secrets.PRODUCTION_SSH_FINGERPINT }}
+          command: ${{ secrets.PRODUCTION_SSH_COMMAND }}
