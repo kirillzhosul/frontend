@@ -19,6 +19,12 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@ui/*": [
+        "./src/shared/ui/*"
+      ],
+      "@ui": [
+        "./src/shared/ui/index"
       ]
     },
     "plugins": [
