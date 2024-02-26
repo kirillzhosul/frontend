@@ -1,9 +1,10 @@
 import clsx from "clsx";
 import { LinkProps } from "./types";
+import NextLink from "next/link";
 
 export function Link({ className, ...props }: LinkProps) {
   return (
-    <Link
+    <NextLink
       {...props}
       className={clsx(
         className,
