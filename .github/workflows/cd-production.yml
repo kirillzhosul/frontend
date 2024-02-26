@@ -3,6 +3,7 @@ name: Continuous delivery production (CD)
 on:
   push:
     branches: prod
+  workflow_dispatch:
 
 jobs:
   test-ci:
