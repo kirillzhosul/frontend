@@ -5,7 +5,7 @@ import { Link } from "@/shared/ui/components/link/link";
 import { Spinner } from "@/shared/ui/components/spinner/spinner";
 import { Header } from "@/shared/ui/layouts/header/header";
 import { useState } from "react";
-import { UiPageSpinner } from "@/shared/ui/components/spinner/page-spinner";
+import { PageSpinner } from "@/shared/ui/components/spinner/page-spinner";
 import { Alert } from "@/shared/ui/components/alert/alert";
 
 export default function UiKitPage() {
@@ -14,7 +14,7 @@ export default function UiKitPage() {
   // TODO: Fix loading buttons center
   // TODO: Introduce modals / form component
   if (loaderShown) {
-    return <UiPageSpinner />;
+    return <PageSpinner />;
   }
 
   const showLoader = () => {
