@@ -22,7 +22,7 @@ export function useContactForm() {
   useEffect(() => {
     const subscription = watch((value, { name, type }) => reset());
     return () => subscription.unsubscribe();
-  }, [watch, reset]);
+  }, [watch]);
 
   return {
     register,

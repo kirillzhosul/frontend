@@ -1,4 +1,6 @@
-export function UiSpinner({ className }: { className?: string }) {
+import { SpinnerProps } from "./types";
+
+export function Spinner({ className }: SpinnerProps) {
   return (
     <svg
       className={className}

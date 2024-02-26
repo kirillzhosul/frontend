@@ -1,15 +1,15 @@
-import { UiButton } from "@/shared/ui/ui-button";
-import { UiLink } from "@/shared/ui/ui-link";
-import { UiTextField } from "@/shared/ui/ui-text-field";
+import { Button } from "@/shared/ui/components/button/button";
+import { Link } from "@/shared/ui/components/link/link";
+import { Input } from "@/shared/ui/components/input/input";
 import { useContactForm } from "../model/use-contact-form";
-import { UiError } from "@/shared/ui/ui-error";
+import { Alert } from "@/shared/ui/components/alert/alert";
 
 export function ContactForm() {
   const { handleSubmit, register, validationErrors, status } = useContactForm();
 
   return (
     <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
-      <UiTextField
+      <Input
         label="Your name"
         inputProps={{
           type: "text",
@@ -17,7 +17,7 @@ export function ContactForm() {
         }}
         error={validationErrors.name ? "Name invalid" : undefined}
       />
-      <UiTextField
+      <Input
         label="Subject or reason"
         inputProps={{
           type: "text",
@@ -27,20 +27,19 @@ export function ContactForm() {
       />
 
       {status === "error" && (
-        <UiError className="mt-3" title="Server error occured!" />
+        <Alert className="mt-3" title="Server error occured!" />
       )}
-      <UiButton
+      <Button
         variant="primary"
         className="my-5"
         isLoading={status === "pending"}
         disabled={status === "success"}
       >
         Submit
-      </UiButton>
+      </Button>
       <p>
-        By submitting, you are accepting{" "}
-        <UiLink href="#">Privacy Policy</UiLink> and{" "}
-        <UiLink href="#">User Agreement</UiLink>
+        By submitting, you are accepting <Link href="#">Privacy Policy</Link>{" "}
+        and <Link href="#">User Agreement</Link>
       </p>
     </form>
   );

@@ -1,26 +1,14 @@
 import clsx from "clsx";
-import { PropsWithRef, SelectHTMLAttributes, useId } from "react";
+import { useId } from "react";
+import { SelectProps } from "./types";
 
-export type UiSelectOption = {
-  value: string;
-  label: string;
-};
-
-export type UiSelectFieldProps = {
-  label?: string;
-  className?: string;
-  error?: string;
-  selectProps?: PropsWithRef<SelectHTMLAttributes<HTMLSelectElement>>;
-  options?: UiSelectOption[];
-};
-
-export function UiSelectField({
+export function Select({
   className,
   label,
   error,
   options,
   selectProps,
-}: UiSelectFieldProps) {
+}: SelectProps) {
   const id = useId();
   return (
     <div className={clsx(className, "flex flex-col gap-1")}>

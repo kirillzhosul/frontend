@@ -1,9 +1,7 @@
 import clsx from "clsx";
-import Link from "next/link";
+import { LinkProps } from "./types";
 
-export type UiLinkProps = {} & Parameters<typeof Link>[0];
-
-export function UiLink({ className, ...props }: UiLinkProps) {
+export function Link({ className, ...props }: LinkProps) {
   return (
     <Link
       {...props}

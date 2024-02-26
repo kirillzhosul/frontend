@@ -1,22 +1,18 @@
 import clsx from "clsx";
-import { ButtonHTMLAttributes } from "react";
-import { UiSpinner } from "./ui-spinner";
+import { Spinner } from "@ui";
+import { ButtonProps } from "./types";
 
-export type UiButtonVariant = "primary" | "outlined" | "secondary";
-export type UiButtonProps = {
-  variant: UiButtonVariant;
-  isLoading?: boolean;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
-
-export function UiButton({
+export function Button({
   className,
   variant,
   isLoading,
+  spinnerProps,
   ...props
-}: UiButtonProps) {
+}: ButtonProps) {
   if (isLoading) {
-    props.children = <UiSpinner />;
+    props.children = <Spinner {...spinnerProps} />;
   }
+
   return (
     <button
       {...props}

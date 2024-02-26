@@ -1,5 +1,5 @@
-import { UiButton } from "@/shared/ui/ui-button";
-import { UiLink } from "@/shared/ui/ui-link";
+import { Button } from "@/shared/ui/components/button/button";
+import { Link } from "@/shared/ui/components/link/link";
 
 export function AuthForm() {
   return (
@@ -9,11 +9,11 @@ export function AuthForm() {
         Sorry, but that feature is currently under maintenance! Please return
         later...
       </p>
-      <UiLink href="/sso-callback">
-        <UiButton variant="primary" disabled>
+      <Link href="/sso-callback">
+        <Button variant="primary" disabled>
           Authenticate with Florgon
-        </UiButton>
-      </UiLink>
+        </Button>
+      </Link>
     </div>
   );
 }

@@ -1,12 +1,12 @@
-import { UiHeader } from "@/shared/ui/ui-header";
-import { UiFormPageLayout } from "@/shared/ui/layouts/ui-form-page-layout";
-import { UiHeaderRightContent } from "@/shared/ui/ui-header-right-content";
-import { UiLink } from "@/shared/ui/ui-link";
+import { Header } from "@/shared/ui/layouts/header/header";
+import { FormPageLayout } from "@/shared/ui/layouts/form-page/form-page-layout";
+import { HeaderRightContent } from "@/shared/ui/layouts/header/header-right-content";
+import { Link } from "@/shared/ui/components/link/link";
 
 export function HomePage() {
   return (
-    <UiFormPageLayout
-      header={<UiHeader rightContent={<UiHeaderRightContent />} />}
+    <FormPageLayout
+      header={<Header rightContent={<HeaderRightContent />} />}
       form={
         <div>
           <p>Sorry, but this page is currently under construction </p>
@@ -15,10 +15,10 @@ export function HomePage() {
             Built with <u>Next.js</u>, <u>FSD</u>, <u>Tailwind CSS</u>
           </p>
           <p>
-            <UiLink href="/ui-kit">UI-kit</UiLink>
+            <Link href="/ui-kit">UI-kit</Link>
           </p>
           <p>
-            <UiLink href="https://github.com/kirillzhosul/web">GitHub</UiLink>
+            <Link href="https://github.com/kirillzhosul/web">GitHub</Link>
           </p>
         </div>
       }

@@ -1,14 +1,8 @@
-import { ReactNode } from "react";
+import { FormPageLayoutProps } from "./types";
 
-export function UiFormPageLayout({
-  header,
-  form,
-  title,
-}: {
-  header?: ReactNode;
-  form?: ReactNode;
-  title?: string;
-}) {
+// TODO: Rework layouts for the forms / boxes
+
+export function FormPageLayout({ header, form, title }: FormPageLayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-slate-100">
       {header}

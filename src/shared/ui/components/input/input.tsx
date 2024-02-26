@@ -1,24 +1,8 @@
 import clsx from "clsx";
-import {
-  ButtonHTMLAttributes,
-  InputHTMLAttributes,
-  PropsWithRef,
-  useId,
-} from "react";
+import { useId } from "react";
+import { InputProps } from "./types";
 
-export type UiTextFieldProps = {
-  label?: string;
-  className?: string;
-  error?: string;
-  inputProps: PropsWithRef<InputHTMLAttributes<HTMLInputElement>>;
-};
-
-export function UiTextField({
-  className,
-  label,
-  error,
-  inputProps,
-}: UiTextFieldProps) {
+export function Input({ className, label, error, inputProps }: InputProps) {
   const id = useId();
   return (
     <div className={clsx(className, "flex flex-col gap-1")}>

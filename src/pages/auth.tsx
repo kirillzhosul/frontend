@@ -1,11 +1,11 @@
 import { AuthForm } from "@/features/auth";
-import { UiHeader } from "@/shared/ui/ui-header";
-import { UiFormPageLayout } from "@/shared/ui/layouts/ui-form-page-layout";
-import { UiHeaderRightContent } from "@/shared/ui/ui-header-right-content";
+import { Header } from "@/shared/ui/layouts/header/header";
+import { FormPageLayout } from "@/shared/ui/layouts/form-page/form-page-layout";
+import { HeaderRightContent } from "@/shared/ui/layouts/header/header-right-content";
 export function AuthPage() {
   return (
-    <UiFormPageLayout
-      header={<UiHeader rightContent={<UiHeaderRightContent />} />}
+    <FormPageLayout
+      header={<Header rightContent={<HeaderRightContent />} />}
       form={<AuthForm />}
       title="Authentication"
     />

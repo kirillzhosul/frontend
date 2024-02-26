@@ -1,11 +1,7 @@
 import clsx from "clsx";
+import { AlertProps } from "./types";
 
-export type UiErrorProps = {
-  title?: string;
-  className?: string;
-};
-
-export function UiError({ className, title }: UiErrorProps) {
+export function Alert({ className, title }: AlertProps) {
   return (
     <div
       className={clsx(

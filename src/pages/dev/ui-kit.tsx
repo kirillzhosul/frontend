@@ -1,12 +1,12 @@
-import { UiButton } from "@/shared/ui/ui-button";
-import { UiTextField } from "@/shared/ui/ui-text-field";
-import { UiSelectField } from "@/shared/ui/ui-select-field";
-import { UiLink } from "@/shared/ui/ui-link";
-import { UiSpinner } from "@/shared/ui/ui-spinner";
-import { UiHeader } from "@/shared/ui/ui-header";
+import { Button } from "@/shared/ui/components/button/button";
+import { Input } from "@/shared/ui/components/input/input";
+import { Select } from "@/shared/ui/components/input/select";
+import { Link } from "@/shared/ui/components/link/link";
+import { Spinner } from "@/shared/ui/components/spinner/spinner";
+import { Header } from "@/shared/ui/layouts/header/header";
 import { useState } from "react";
-import { UiPageSpinner } from "@/shared/ui/ui-page-spinner";
-import { UiError } from "@/shared/ui/ui-error";
+import { UiPageSpinner } from "@/shared/ui/components/spinner/page-spinner";
+import { Alert } from "@/shared/ui/components/alert/alert";
 
 export default function UiKitPage() {
   const [loaderShown, setLoaderShown] = useState(false);
@@ -26,56 +26,56 @@ export default function UiKitPage() {
 
   return (
     <div className={`min-h-screen bg-slate-100`}>
-      <UiHeader
+      <Header
         rightContent={
-          <UiButton variant="primary" onClick={showLoader}>
+          <Button variant="primary" onClick={showLoader}>
             Show fullscreen loader
-          </UiButton>
+          </Button>
         }
       />
       <div className="pt-10">
         <div className="flex items-center justify-between px-[25%]">
-          <UiButton variant="primary">primary button</UiButton>
-          <UiButton variant="secondary">secondary button</UiButton>
-          <UiButton variant="outlined">secondary button</UiButton>
+          <Button variant="primary">primary button</Button>
+          <Button variant="secondary">secondary button</Button>
+          <Button variant="outlined">secondary button</Button>
         </div>
         <div className="flex items-center justify-between px-[25%] mt-5">
-          <UiButton variant="primary" disabled>
+          <Button variant="primary" disabled>
             primary button
-          </UiButton>
-          <UiButton variant="secondary" disabled>
+          </Button>
+          <Button variant="secondary" disabled>
             secondary button
-          </UiButton>
-          <UiButton variant="outlined" disabled>
+          </Button>
+          <Button variant="outlined" disabled>
             secondary button
-          </UiButton>
+          </Button>
         </div>
         <div className="flex items-center justify-between px-[25%] mt-5">
-          <UiButton variant="primary" isLoading />
-          <UiButton variant="secondary" isLoading />
-          <UiButton variant="outlined" isLoading />
+          <Button variant="primary" isLoading />
+          <Button variant="secondary" isLoading />
+          <Button variant="outlined" isLoading />
         </div>
         <div className="flex items-center justify-between px-[25%] mt-5">
-          <UiButton variant="primary" isLoading disabled />
-          <UiButton variant="secondary" isLoading disabled />
-          <UiButton variant="outlined" isLoading disabled />
+          <Button variant="primary" isLoading disabled />
+          <Button variant="secondary" isLoading disabled />
+          <Button variant="outlined" isLoading disabled />
         </div>
         <div className="flex items-center justify-between px-[25%] pt-24">
           <div className="rounded-xl border border-slate-300 px-14 py-8 w-full max-w-[400px] bg-white self-center">
             <div className="flex flex-col gap-4">
-              <UiTextField
+              <Input
                 label="Text field"
                 inputProps={{ placeholder: "Placeholder" }}
               />
-              <UiTextField
+              <Input
                 label="Error text field"
                 error="Text field error"
                 inputProps={{ placeholder: "Placeholder" }}
               />
-              <UiTextField
+              <Input
                 inputProps={{ placeholder: "Text field with placeholder only" }}
               />
-              <UiSelectField
+              <Select
                 options={[
                   {
                     value: "1",
@@ -91,9 +91,9 @@ export default function UiKitPage() {
           </div>
           <div className="rounded-xl border border-slate-300 px-14 py-8 w-full max-w-[400px] bg-white self-center">
             <div className="flex flex-col gap-4">
-              <UiLink href="">Some text as link...</UiLink>
-              <UiSpinner className="text-teal-600 v-20 h-20" />
-              <UiError title="Error title (as badge)" />
+              <Link href="">Some text as link...</Link>
+              <Spinner className="text-teal-600 v-20 h-20" />
+              <Alert title="Error title (as badge)" />
             </div>
           </div>
         </div>
