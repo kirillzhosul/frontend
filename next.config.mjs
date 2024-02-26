@@ -4,8 +4,8 @@ let nextConfig = {
 };
 
 if (process.env.NODE_ENV === "production") {
-  nextConfig.basePath = "/web";
-  nextConfig.assetPrefix = "/web";
+  nextConfig.basePath = "/frontend";
+  nextConfig.assetPrefix = "/frontend";
   nextConfig.output = "export";
 } else {
 }
