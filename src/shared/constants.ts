@@ -1,8 +1,15 @@
+/**
+ * Application constants
+ */
+
+/**
+ * Paths to layers
+ */
 export const ROUTES = {
-  // TODO?: Fetch menu page as API response?
   home: "/",
   blog: "/blog",
   auth: "/auth",
-  contact: "/contact/",
+  contact: "/contact",
+  about: "/about",
   showcase: "/showcase",
 };

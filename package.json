@@ -1,20 +1,18 @@
 {
   "name": "kirillzhosul-frontend",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prettier": "prettier -w .",
     "lint": "next lint",
     "lint:types": "tsc --noEmit",
-    "prettier": "prettier -w .",
-    "test": "echo 1",
-    "test-full": "jest --passWithNoTests && playwright test"
+    "test": "echo 1"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.24.1",
-    "axios": "^1.6.7",
     "clsx": "^2.1.0",
     "next": "14.1.0",
     "react": "^18",
@@ -22,22 +20,15 @@
     "react-hook-form": "^7.50.1"
   },
   "devDependencies": {
-    "@playwright/test": "^1.41.2",
-    "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^14.2.1",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.12",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "dotenv": "^16.4.5",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
+    "eslint-config-prettier": "^9.1.0",
     "postcss": "^8",
-    "prettier": "3.2.5",
+    "prettier": "^3.2.5",
     "tailwindcss": "^3.3.0",
     "ts-node": "^10.9.2",
     "typescript": "^5"

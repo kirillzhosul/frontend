@@ -1,22 +1,36 @@
+/**
+ * Application renderer
+ */
 import type { AppProps } from "next/app";
-import { AppProvider } from "./app-provider";
-import { Inter } from "next/font/google";
+
+import { Inter as Font } from "next/font/google";
 import clsx from "clsx";
 import Head from "next/head";
+import { Header } from "@ui";
 
-const inter = Inter({ subsets: ["latin", "cyrillic"] });
+/**
+ * Global font
+ */
+const font = Font({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-sans",
+});
 
+/**
+ * Application renderer
+ */
 export function App({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Head>
         <title>Kirill Zhosul</title>
       </Head>
-      <AppProvider>
-        <div className={clsx(inter.className, "")}>
-          <Component {...pageProps} />
-        </div>
-      </AppProvider>
+      <div
+        className={clsx(font.variable, "min-h-screen font-sans antialiased")}
+      >
+        <Header />
+        <Component {...pageProps} />
+      </div>
     </div>
   );
 }

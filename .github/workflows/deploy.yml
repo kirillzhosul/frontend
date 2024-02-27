@@ -1,12 +1,13 @@
-name: Continuous delivery production (CD)
+name: CD
 
 on:
   push:
-    branches: prod
+    branches: ["prod"]
+  pull_request:
+    branches: ["prod"]
   workflow_dispatch:
-
 jobs:
-  test-ci:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,8 +19,8 @@ jobs:
       - run: npm run lint
       - run: npm run lint:types
       - run: npm run test
-  production-cd:
-    needs: test-ci
+  deploy:
+    needs: tests
     runs-on: ubuntu-latest
     concurrency:
       group: production

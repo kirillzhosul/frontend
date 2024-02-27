@@ -2,17 +2,17 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ "prod", "dev", "feature-*", "stage" ]
+    branches: ["prod"]
   pull_request:
-    branches: [ "prod", "dev", "feature-*", "stage" ]
+    branches: ["prod"]
   schedule:
-    - cron: '21 0 * * 3'
+    - cron: "21 0 * * 3"
 
 jobs:
   analyze:
     name: Analyze
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
-    timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 360
     permissions:
       security-events: write
       actions: read
@@ -21,21 +21,21 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript-typescript' ]
+        language: ["javascript-typescript"]
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
-      with:
-        languages: ${{ matrix.language }}
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v3
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
 
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
-      with:
-        category: "/language:${{matrix.language}}"
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{matrix.language}}"

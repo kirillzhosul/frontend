@@ -1,7 +1,4 @@
-import { Button } from "./button/button";
+import { Button, ButtonLink } from "./button";
 import { Spinner, PageSpinner } from "./spinner";
-import { Link } from "./link";
-import { Alert } from "./alert";
-import { Select, Input } from "./input";
-
-export { Button, Spinner, Link, Alert, PageSpinner, Select, Input };
+import { Header } from "./header";
+export { Button, ButtonLink, Spinner, PageSpinner, Header };

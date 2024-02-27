@@ -1,12 +1,44 @@
-import { SpinnerProps } from "./types";
+/**
+ * Loader spinners
+ */
+import clsx from "clsx";
 
+/**
+ * Properties of the spinners
+ */
+export type SpinnerProps = {
+  className?: string;
+};
+export type PageSpinnerProps = {} & SpinnerProps;
+
+/**
+ * Fullscreen spinner loader component
+ * @param className Styles to apply
+ * @returns Spinner page react component
+ */
+export function PageSpinner({ className }: PageSpinnerProps) {
+  return (
+    <div
+      className={clsx(
+        "fixed left-0 top-0 right-0 bottom-0 flex justify-center items-center bg-slate-100",
+        className,
+      )}
+    >
+      <Spinner className="text-blue-500 w-24 h-24" />
+    </div>
+  );
+}
+
+/**
+ * Spinner loader icon component
+ * @param className Styles to apply
+ * @returns Spinner react component
+ */
 export function Spinner({ className }: SpinnerProps) {
   return (
     <svg
       className={className}
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
       viewBox="0 0 24 24"
     >
       <path
