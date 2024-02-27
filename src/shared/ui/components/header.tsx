@@ -34,11 +34,8 @@ export function HeaderLogo() {
 function HeaderIsland({ className }: { className?: string }) {
   return (
     <div className={className}>
-      <ButtonLink href={ROUTES.contact} variant="primary" disabled>
+      <ButtonLink href={ROUTES.contact} variant="primary">
         Contact me
-      </ButtonLink>
-      <ButtonLink href={ROUTES.auth} variant="secondary" disabled>
-        Sign in
       </ButtonLink>
     </div>
   );
@@ -47,12 +44,12 @@ function HeaderIsland({ className }: { className?: string }) {
 /**
  * Button for the navbar
  */
-function HeaderNavbarButton({ children, ...props }: ButtonLinkProps) {
+function HeaderNavbarButton({ children, href, ...props }: ButtonLinkProps) {
   return (
     <li>
       <ButtonLink
         {...props}
-        href="/"
+        href={href}
         className="py-2 pr-4 pl-3 text-gray-700 lg:p-0 "
         variant="linkAnimated"
       >
@@ -70,15 +67,9 @@ function HeaderNavbar({ className }: { className?: string }) {
     <nav className={clsx("w-full lg:w-auto", className)}>
       <ul className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
         <HeaderNavbarButton href={ROUTES.home}>Home</HeaderNavbarButton>
-        <HeaderNavbarButton href={ROUTES.about} disabled>
-          About me
-        </HeaderNavbarButton>
-        <HeaderNavbarButton href={ROUTES.blog} disabled>
-          Blog
-        </HeaderNavbarButton>
-        <HeaderNavbarButton href={ROUTES.showcase} disabled>
-          Showcase
-        </HeaderNavbarButton>
+        <HeaderNavbarButton href={ROUTES.about}>About me</HeaderNavbarButton>
+        <HeaderNavbarButton href={ROUTES.blog}>Blog</HeaderNavbarButton>
+        <HeaderNavbarButton href={ROUTES.showcase}>Showcase</HeaderNavbarButton>
       </ul>
     </nav>
   );

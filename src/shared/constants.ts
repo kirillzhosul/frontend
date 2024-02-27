@@ -6,10 +6,9 @@
  * Paths to layers
  */
 export const ROUTES = {
-  home: "/",
-  blog: "/blog",
-  auth: "/auth",
-  contact: "/contact",
-  about: "/about",
-  showcase: "/showcase",
+  home: "/#",
+  about: "/#about",
+  blog: "/#blog",
+  showcase: "/#showcase",
+  contact: "/#contact",
 };

@@ -25,7 +25,9 @@ export type ButtonVariant =
   | "primary"
   | "secondary"
   | "outlinePrimary"
-  | "outlineSecondary";
+  | "outlineSecondary"
+  | "success"
+  | "none";
 
 /**
  * State of the button to deal with
@@ -82,10 +84,12 @@ export function Button({
         state !== "default" ? "opacity-50" : "",
         animate ? "hover:scale-110 duration-150" : "",
         {
+          none: "",
           linkAnimated: "text-black hover:text-gray-500",
           link: "text-black hover:text-gray-500",
           primary: "text-white bg-blue-700 hover:bg-blue-600",
           secondary: "text-white bg-gray-700 hover:bg-gray-600",
+          success: "text-white bg-green-700 hover:bg-green-600",
           outlinePrimary:
             "text-blue-700 border border-blue-700 hover:bg-blue-600 hover:text-white",
           outlineSecondary:

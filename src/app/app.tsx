@@ -13,7 +13,6 @@ import { Header } from "@ui";
  */
 const font = Font({
   subsets: ["latin", "cyrillic"],
-  variable: "--font-sans",
 });
 
 /**
@@ -26,7 +25,7 @@ export function App({ Component, pageProps }: AppProps) {
         <title>Kirill Zhosul</title>
       </Head>
       <div
-        className={clsx(font.variable, "min-h-screen font-sans antialiased")}
+        className={clsx(font.className, "min-h-screen font-sans antialiased")}
       >
         <Header />
         <Component {...pageProps} />
