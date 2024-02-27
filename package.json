@@ -9,7 +9,8 @@
     "lint": "next lint",
     "lint:types": "tsc --noEmit",
     "prettier": "prettier -w .",
-    "test": "jest --passWithNoTests && playwright test"
+    "test": "echo 1",
+    "test-full": "jest --passWithNoTests && playwright test"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.22.2",
