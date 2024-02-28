@@ -1,6 +1,7 @@
 import { Button } from "@/shared/ui";
 import { IconsBlock } from "./icons-block";
 import clsx from "clsx";
+
 const SKILLS = [
   { skill: "Python", color: "bg-yellow-400" },
   { skill: "JavaScript", color: "bg-yellow-600" },

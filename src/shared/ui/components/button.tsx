@@ -39,8 +39,9 @@ export type ButtonState = "default" | "loading" | "disabled";
  */
 export type ButtonLinkProps = {
   href: string;
-  linkProps?: NextLinkProps;
+  linkProps?: ButtonInternalLinkProps;
 } & ButtonProps;
+export type ButtonInternalLinkProps = Omit<NextLinkProps, "href">;
 export type ButtonProps = {
   children?: ReactNode;
   className?: string;

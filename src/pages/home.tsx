@@ -3,7 +3,6 @@
  */
 
 import { AboutSection } from "@/features/landing/ui/about-section";
-import { BlogSection } from "@/features/landing/ui/blog-section";
 import { ContactSection } from "@/features/landing/ui/contact-section";
 import { Divisor } from "@/features/landing/ui/divisor";
 import { HomeSection } from "@/features/landing/ui/home-section";
@@ -16,7 +15,6 @@ export function HomePage() {
       <HomeSection />
       <AboutSection />
       <ShowcaseSection />
-      <BlogSection />
       <Divisor />
       <ContactSection />
       <Footer />
