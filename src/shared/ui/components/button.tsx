@@ -73,7 +73,11 @@ export function Button({
 }: ButtonProps) {
   state = loading ? "loading" : disabled ? "disabled" : "default";
   const isLink = variant === "link" || variant === "linkAnimated";
-  const animate = !(variant === "link" || state !== "default");
+  const animate = !(
+    variant === "link" ||
+    variant === "none" ||
+    state !== "default"
+  );
   return (
     <button
       disabled={state !== "default"}

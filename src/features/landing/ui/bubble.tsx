@@ -6,18 +6,20 @@ import clsx from "clsx";
 export function Bubble({
   size,
   className,
+  z = undefined,
 }: {
   size: number;
   className: string;
+  z?: number;
 }) {
   return (
     <div
-      className={clsx("absolute animate-pulse", className)}
+      className={clsx("absolute", className)}
       style={{
         borderRadius: "100%",
         width: size,
         height: size,
-        zIndex: -1,
+        zIndex: z || -1,
       }}
     ></div>
   );
