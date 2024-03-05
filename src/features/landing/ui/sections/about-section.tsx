@@ -1,5 +1,5 @@
 import { Button } from "@/shared/ui";
-import { IconsBlock } from "./icons-block";
+import { IconsBlock } from "../icons-block";
 import clsx from "clsx";
 
 const SKILLS = [

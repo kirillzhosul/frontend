@@ -1,10 +1,10 @@
-import { IconsBlock } from "./icons-block";
+import { IconsBlock } from "../icons-block";
 
 export function ContactSection() {
   return (
     <section
       id="contact"
-      className="bg-white flex flex-col items-center  text-center h-[50vh]"
+      className="bg-white flex flex-col items-center text-center h-[35vh]"
     >
       <p className="text-blue-500 text-2xl mt-[10vh]">Contact With Me</p>
       <p className="text-5xl">

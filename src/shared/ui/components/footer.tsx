@@ -6,7 +6,7 @@ const logoFont = AR_One_Sans({ weight: "700", subsets: ["latin"] });
 
 export function Footer() {
   return (
-    <footer className="shadow bg-gray-900">
+    <footer className="shadow bg-gray-900 mt-10">
       <div className="max-w-screen-xl mx-auto p-4 py-8">
         <div className="flex items-center justify-between">
           <ButtonLink
@@ -36,7 +36,16 @@ export function Footer() {
                 variant="link"
                 className="text-gray-500 hover:underline me-4"
               >
-                admin@kirillzhosul.ru
+                Contact Admin
+              </ButtonLink>
+            </li>
+            <li>
+              <ButtonLink
+                href="/privacy"
+                variant="link"
+                className="text-gray-500 hover:underline me-4"
+              >
+                Privacy Policy
               </ButtonLink>
             </li>
           </ul>
@@ -46,7 +55,7 @@ export function Footer() {
           <p>
             Powered by Next.js and Nginx, source code is available{" "}
             <ButtonLink
-              href="https://github.com/frontend"
+              href="https://github.com/kirillzhosul/frontend"
               variant="link"
               className="text-white"
             >

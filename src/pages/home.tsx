@@ -2,12 +2,11 @@
  * Home page
  */
 
-import { AboutSection } from "@/features/landing/ui/about-section";
-import { ContactSection } from "@/features/landing/ui/contact-section";
+import { AboutSection } from "@/features/landing/ui/sections/about-section";
+import { ContactSection } from "@/features/landing/ui/sections/contact-section";
 import { Divisor } from "@/features/landing/ui/divisor";
-import { HomeSection } from "@/features/landing/ui/home-section";
-import { ShowcaseSection } from "@/features/landing/ui/showcase-section";
-import { Footer } from "@/shared/ui/components/footer";
+import { HomeSection } from "@/features/landing/ui/sections/home-section";
+import { ShowcaseSection } from "@/features/landing/ui/sections/showcase-section";
 
 export function HomePage() {
   return (
@@ -17,7 +16,6 @@ export function HomePage() {
       <ShowcaseSection />
       <Divisor />
       <ContactSection />
-      <Footer />
     </main>
   );
 }

@@ -68,7 +68,6 @@ function HeaderNavbar({ className }: { className?: string }) {
       <ul className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
         <HeaderNavbarButton href={ROUTES.home}>Home</HeaderNavbarButton>
         <HeaderNavbarButton href={ROUTES.about}>About me</HeaderNavbarButton>
-        <HeaderNavbarButton href={ROUTES.blog}>Blog</HeaderNavbarButton>
         <HeaderNavbarButton href={ROUTES.showcase}>Showcase</HeaderNavbarButton>
       </ul>
     </nav>
