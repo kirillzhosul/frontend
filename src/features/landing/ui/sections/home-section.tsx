@@ -20,7 +20,7 @@ export function HomeSection() {
         </div>
         <IconsBlock />
       </div>
-      <div>
+      <div className="hidden">
         <Image
           width="730"
           height="730"

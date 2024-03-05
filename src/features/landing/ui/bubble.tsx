@@ -14,7 +14,7 @@ export function Bubble({
 }) {
   return (
     <div
-      className={clsx("absolute animate-wiggle", className)}
+      className={clsx("absolute", className)}
       style={{
         borderRadius: "100%",
         width: size,
