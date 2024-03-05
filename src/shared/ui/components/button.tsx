@@ -78,13 +78,27 @@ export function Button({
     variant === "none" ||
     state !== "default"
   );
+  /*
+     <button className="
+     relative flex h-[50px] w-40 items-center justify-center 
+     overflow-hidden bg-gray-800 text-white 
+     shadow-2xl transition-all 
+     before:absolute 
+     before:h-0 before:w-0 
+     before:rounded-full 
+     before:bg-orange-600 
+     before:duration-500 
+     before:ease-out hover:shadow-orange-600 hover:before:h-56 hover:before:w-56">
+        <span className="relative">Circle hover</span>
+      </button>
+  */
   return (
     <button
       disabled={state !== "default"}
       className={clsx(
         className,
         "font-medium",
-        "rounded-xl transition",
+        "transition rounded-xl",
         isLink ? "mr-2" : "px-5 py-2.5 mr-2",
         state !== "default" ? "opacity-50" : "",
         animate ? "hover:scale-110 duration-150" : "",

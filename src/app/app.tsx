@@ -7,6 +7,7 @@ import { Inter as Font } from "next/font/google";
 import clsx from "clsx";
 import Head from "next/head";
 import { Header } from "@ui";
+import { Footer } from "@/shared/ui/components/footer";
 
 /**
  * Global font
@@ -53,6 +54,7 @@ export function App({ Component, pageProps }: AppProps) {
         >
           <Header />
           <Component {...pageProps} />
+          <Footer />
         </div>
       </div>
     </YandexMetricaProvider>
